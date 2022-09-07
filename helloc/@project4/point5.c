@@ -13,5 +13,6 @@ int main(){
     }
 
     printf("%d",len);
+    getch();
     return 0;
 }
