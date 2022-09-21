@@ -6,7 +6,7 @@ int main()
     int array[20] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
     int in1, in2, *ptr1, *ptr2, fact;
     printf("Enter the first and last number in range to be deleated:\n");
-    scanf("%d,%d", &in1, &in2);
+    scanf("%d %d", &in1, &in2);
     for (int i = 0; i < 20; i++)
     {
         if (array[i] == in1)
@@ -30,6 +30,6 @@ int main()
     {
         printf("%d ", *(array + i));
     }
-
+    getch();
     return 0;
 }
