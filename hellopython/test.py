@@ -1,7 +1,15 @@
-f=["a","b","c","d","a","v","e","c"]
-'''for a in f:
-    for i in range(len(f)):
-        if(a==f[i]):
-            f[i]=" "'''
-        
-print(f)
+
+
+
+
+
+i=0
+while True:
+    i+=1
+    if(i == 2):
+        continue
+    if(i == 5):
+        break
+    
+    print(i)
+
