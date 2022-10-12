@@ -1,15 +1,10 @@
+text = input()
+word = input()
+def search(text, word):
+    range1=text.split()
+    if word in range1:
+        return "word found"
+    else:
+        return "word not found"
 
-
-
-
-
-i=0
-while True:
-    i+=1
-    if(i == 2):
-        continue
-    if(i == 5):
-        break
-    
-    print(i)
-
+print(search(text, word))
