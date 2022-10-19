@@ -1,19 +1,28 @@
-#include<stdio.h>
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter the numbr of rows:\n");
+    scanf("%d", &n);
 
-int main(){
-    int x,y;
-    printf("Enter two numbers\n");
-    scanf("%d%d",&x,&y);
-    if(x>y){
-        printf("%d is greatr than %d",x,y);
-    }
-    else if(y>x)
+    for (int i = 1; i <= n; i++)
     {
-        printf("%d is greater than %d",y,x);
+        for (int k = (n - i); k >= 0; k--)
+        {
+            printf(" ");
+        }
+        for (int j = 1; j < i; j++)
+        {
+            printf("%d", j);
+        }
+
+        printf("%d", i);
+
+        for (int j = 1; j < i; j++)
+        {
+            printf("%d", i - j);
+        }
+        printf("\n");
     }
-    else
-    {
-        printf("Both numbers are equal");
-    }
-return 0;
+    return 0;
 }

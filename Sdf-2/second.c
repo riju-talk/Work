@@ -1,14 +1,12 @@
 #include<stdio.h>
-int main(){
-int x,y;
-    printf("Enter a number\n");
-    scanf("%d",&x);
-    if(x>0){
-        printf("%d is positive",x);
-    }
-    else{
-        printf("%d is negative",x);
-    }
+#include<math.h>
 
-return 0;
+
+int main(){
+    int a,b,c,D;
+    printf("Pls enter the coefficients of equations");
+    scanf("%d,%d,%d",&a,&b,&c);
+    D=b*b-4*a*c;
+    return 0;
 }
+
