@@ -40,7 +40,36 @@ int main(){
     node5->data=120;
     node5->node=NULL;
 
-    traverse(head);
+    struct lst *node6 = (struct lst*)malloc(sizeof(struct lst));
+    node6->data=909800;
+
+    struct lst *newhead = (struct lst*)malloc(sizeof(struct lst));
+    newhead->data=788767;
+
+    struct lst *temp;
+
+    for(struct lst *ptr=head; ptr!=NULL; ptr=ptr->node){
+        if(ptr->data==80  && (ptr->node)->data==500){
+            temp = (ptr->node);
+            ptr->node=node6;
+            node6->node=temp;
+        }
+    }
+
+    struct lst *final = (struct lst*)malloc(sizeof(struct lst));
+    final->data=25081902;
+
+    for(struct lst *ptr=head; ptr!=NULL; ptr=ptr->node){
+        if(ptr->node==NULL){
+            ptr->node=final;
+            final->node=NULL;
+        }
+    }
+
+    newhead->node=head;
+
+
+    traverse(newhead);
 
     getch();
     return 0;
