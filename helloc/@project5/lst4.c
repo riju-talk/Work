@@ -5,6 +5,24 @@ struct lst{
     struct lst *node;
 };
 
+void search(struct lst *ptr,int data){
+    int count=-1;
+    for(;ptr!=NULL;){
+        count+=1;
+        if(ptr->data==data){
+            printf("term %d :adress %u :postion %d ",ptr->data,ptr,count);
+            break;
+        }
+        ptr=ptr->node;
+    }
+}
+
+void sort(struct lst *ptr,int data){
+    for(;ptr!=NULL;ptr=ptr->node){
+        for()
+    }
+}
+
 int main(){
 
     struct lst *head = (struct lst*)malloc(sizeof(struct lst));
@@ -34,17 +52,8 @@ int main(){
     
     for(struct lst *ptr=head;ptr!=NULL;ptr=ptr->node){
         printf("%d ",ptr->data);
-    }  
-    printf("\n");
-    update(head,500,7090);
-    
-    for(struct lst *ptr=head;ptr!=NULL;ptr=ptr->node){
-        printf("%d ",ptr->data);
-    }
-    del(head,60);
-    printf("\n"); 
-    for(struct lst *ptr=head;ptr!=NULL;ptr=ptr->node){
-        printf("%d ",ptr->data);
-    }
+    }   
+    printf("\n\r");
+    search(head,120);
     return 0;
 }

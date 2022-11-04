@@ -4,6 +4,18 @@ struct lst{
     int data;
     struct lst *node;
 };
+struct lst* create(int x);
+struct lst* create(int x){
+    struct lst *y=(struct lst *)malloc(sizeof(struct lst));
+    y->data=x;
+    y->nextitm=NULL;
+    return y;
+}
+void destroy(struct lst *y);
+void destroy(struct lst *y){
+    free(y);
+}
+
 void update(struct lst *ptr,int data1,int data2);
 void update(struct lst *ptr,int data1,int data2){
     struct lst *temp;
@@ -25,6 +37,32 @@ void del(struct lst *ptr,int data){
         }
     }
 }   
+
+void insert_bet(struct lst *ptr,int x,int y){
+    struct lst *node=create(90);
+    for(; ptr!=NULL; ptr=ptr->node){
+        if(ptr->data==x  && (ptr->node)->data==y){
+            temp = (ptr->node);
+            ptr->node=node6;
+            node6->node=temp;
+        }
+    }
+}
+
+void insert_end(struct lst *ptr,final){
+    struct lst *final=create(25091902);
+     for(; ptr!=NULL; ptr=ptr->node){
+        if(ptr->node==NULL){
+            ptr->node=final;
+            final->node=NULL;
+        }
+    }
+
+
+}
+void insert_beg(struct lst *ptr){
+    for(;ptr!=NULL;ptr=ptr->node)
+}
 int main(){
 
     struct lst *head = (struct lst*)malloc(sizeof(struct lst));

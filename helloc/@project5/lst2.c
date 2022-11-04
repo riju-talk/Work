@@ -14,6 +14,18 @@ void traverse(struct lst *ptr){
         ptr=ptr->node;
     }
 }
+struct lst* create(int x);
+struct lst* create(int x){
+    struct lst *y=(struct lst *)malloc(sizeof(struct lst));
+    y->data=x;
+    y->node=NULL;
+    return y;
+}
+void destroy(struct lst *y);
+void destroy(struct lst *y){
+    free(y);
+}
+
 int main(){
     struct lst *head = (struct lst*)malloc(sizeof(struct lst));
     struct lst *node1 = (struct lst*)malloc(sizeof(struct lst));
@@ -21,7 +33,10 @@ int main(){
     struct lst *node3 = (struct lst*)malloc(sizeof(struct lst));
     struct lst *node4 = (struct lst*)malloc(sizeof(struct lst));
     struct lst *node5 = (struct lst*)malloc(sizeof(struct lst));
-     
+    struct lst *node7 = (struct lst*)malloc(sizeof(struct lst));
+    struct lst *node8 = (struct lst*)malloc(sizeof(struct lst));
+    struct lst *node9 = (struct lst*)malloc(sizeof(struct lst));
+    
     head->data=10;
     head->node=node1;
 
@@ -38,8 +53,16 @@ int main(){
     node4->node=node5;
 
     node5->data=120;
-    node5->node=NULL;
+    node5->node=node7;
 
+    node7->data=240;
+    node7->node=node8;
+
+    node8->data=890;
+    node8->node=node9;
+
+    node9->data=75;
+    node9->node=NULL;
     struct lst *node6 = (struct lst*)malloc(sizeof(struct lst));
     node6->data=909800;
 
